@@ -25,4 +25,4 @@ RUN buildDeps='minicom' \
   && ./configure --target=h8300-elf --disable-nls --disable-threads \
   --disable-shared --enable-languages=c \
   && make \
-  && make install \
+  && make install
