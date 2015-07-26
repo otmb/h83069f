@@ -7,8 +7,8 @@ RUN buildDeps='minicom' \
 	&& set -x \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends \
   && cd /usr/src \
-  && curl -SL "http://ftp.gnu.org/gnu/binutils/binutils-2.19.1.tar.bz2" -o binutils.tar.bz2 \
-  && curl -SL "http://ftp.gnu.org/gnu/gcc/gcc-3.4.6/gcc-3.4.6.tar.bz2" -o gcc.tar.bz2 \
+  && curl -SL "http://ftpmirror.gnu.org/binutils/binutils-2.19.1.tar.bz2" -o binutils.tar.bz2 \
+  && curl -SL "http://ftpmirror.gnu.org/gcc/gcc-3.4.6/gcc-3.4.6.tar.bz2" -o gcc.tar.bz2 \
   && mkdir -p /usr/src/binutils \
   && tar -xvf binutils.tar.bz2 -C /usr/src/binutils --strip-components=1 \
   && rm binutils.tar.bz2* \
