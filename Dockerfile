@@ -3,7 +3,7 @@ FROM buildpack-deps:wheezy
 ADD h8300.c.patch /root/
 ADD minirc.dfl /etc/minicom/
 
-RUN buildDeps='flex minicom' \
+RUN buildDeps='minicom' \
 	&& set -x \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends \
   && cd /usr/src \
